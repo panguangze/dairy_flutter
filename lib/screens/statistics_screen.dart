@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:path/path.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import '../models/mood_entry.dart';
@@ -261,7 +260,7 @@ class StatisticsScreen extends StatelessWidget {
                           width: 30,
                           height: 30,
                           decoration: BoxDecoration(
-                            color: _getColorForMood(mood, context as BuildContext).withOpacity(0.2),
+                            color: _getColorForMood(mood, context).withOpacity(0.2),
                             shape: BoxShape.circle,
                           ),
                           child: Center(
