@@ -146,7 +146,7 @@ class StatisticsScreen extends StatelessWidget {
                   
                   SizedBox(height: 12),
                   
-                  _buildMonthlyChart(provider.moodEntries),
+                  _buildMonthlyChart(provider.moodEntries, context),
                 ],
               ),
             ),
@@ -204,7 +204,7 @@ class StatisticsScreen extends StatelessWidget {
     }
   }
 
-  Widget _buildMonthlyChart(List<MoodEntry> entries) {
+  Widget _buildMonthlyChart(List<MoodEntry> entries, BuildContext context) {
     // Group entries by month
     final monthlyData = <String, Map<MoodType, int>>{};
     

@@ -13,9 +13,11 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   static const String title = 'Love Diary';
 
-  final GoRouter _router = GoRouter(
+  GoRouter get _router => GoRouter(
     initialLocation: '/',
     routes: [
       GoRoute(
