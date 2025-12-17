@@ -1,0 +1,13 @@
+// Gradle init script to fix missing namespace in library modules
+allprojects {
+    afterEvaluate { project ->
+        if (project.plugins.hasPlugin('com.android.library')) {
+            def androidExt = project.extensions.findByName('android')
+            if (androidExt && !androidExt.hasProperty('namespace') || !androidExt.namespace) {
+                // Set a default namespace for library modules that don't have one
+                androidExt.namespace = "com.example.${project.name.replace('-', '_')}"
+                println "Added namespace '${androidExt.namespace}' to library project: ${project.name}"
+            }
+        }
+    }
+}

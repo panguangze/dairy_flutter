@@ -1,35 +1,39 @@
 ```
-# Dart/Flutter build outputs
-.dart_tool/
-.build/
-dist/
+# Gradle
+.gradle/
+build/
+target/
 
-# Dependencies
-.pub/
-.packages
+# Android
+*.apk
+*.aar
+*.dex
 
-# Logs
-*.log
-
-# Environment variables
+# Environment
 .env
 .env.local
 *.env.*
 
-# IDE files
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# Coverage
-coverage/
-*.lcov
+# Logs
+*.log
 
 # Temporary files
 *.tmp
+*~
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.egg-info/
+dist/
 ```
