@@ -2,12 +2,16 @@
 # Gradle
 .gradle/
 build/
-target/
+!gradle/wrapper/gradle-wrapper.jar
 
 # Android
 *.apk
-*.aar
-*.dex
+*.ap_
+*.aab
+captures/
+.externalNativeBuild
+.gradle
+local.properties
 
 # Environment
 .env
@@ -17,23 +21,36 @@ target/
 # Logs
 *.log
 
-# Temporary files
-*.tmp
-*~
-.DS_Store
-Thumbs.db
+# Dependencies
+node_modules/
+vendor/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+.env/
+.envs/
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage/
+htmlcov/
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*.tmp
 
-# Dependencies
-node_modules/
-venv/
-.venv/
-__pycache__/
-*.egg-info/
-dist/
+# OS
+.DS_Store
+Thumbs.db
 ```
