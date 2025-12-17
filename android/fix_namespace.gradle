@@ -1,0 +1,7 @@
+// Fix for plugins that don't have namespace declared
+if (project.plugins.hasPlugin('com.android.library')) {
+    if (!project.extensions.findByType(com.android.build.gradle.LibraryExtension)) {
+        println("Adding namespace to " + project.name)
+        project.android.namespace = "com.example." + project.name.toLowerCase()
+    }
+}
